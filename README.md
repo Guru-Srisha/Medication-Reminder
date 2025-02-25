@@ -21,13 +21,14 @@ The **Medication Reminder** is a smart medication adherence system designed to h
 - **Push Buttons** (For user input)
 
 ## Architecture
-1. Sturdy hardware interface, designed with 2D, compatible for 5mm Acrylic sheets.
+1. Sturdy hardware interface, designed with 2D CAD, compatible for 5mm Acrylic sheets.
 2. The ESP32 controls all hardware components and manages medication schedules.
-3. The RTC (DS3231) maintains accurate time, even when WiFi is unavailable.
-4. When it's time to take medicine, the system:
+3. Uses TimeZoneDB API to fetch the current time accurately - http://timezonedb.com/
+4. The RTC (DS3231) maintains accurate time, even when WiFi is unavailable.
+5. When it's time to take medicine, the system:
    - Activates a buzzer and displays a reminder on the LCD.
    - Automatically opens the corresponding medicine bin.
-5. The user acknowledges by pressing a button, which stops the alert and closes the bin.
-6. The system tracks medicine consumption and diaplays low-supply alerts on the LCD.
-7. Users can set and modify reminders using the hardware interface.
-8. Blynk IoT integration allows reminders via notifications and remotely deactivating the reminders.
+6. The user acknowledges by pressing a button, which stops the alert and closes the bin.
+7. The system tracks medicine consumption and diaplays low-supply alerts on the LCD.
+8. Users can set and modify reminders using the hardware interface.
+9. Blynk IoT integration allows reminders via notifications and remotely deactivating the reminders.
